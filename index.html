@@ -1,667 +1,1559 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Flax Export - Premium Egyptian Flax Supplier |  تصدير الكتان</title>
-    <meta name="description" content="Premium Egyptian flax supplier for international markets. High-quality raw flax export from Egypt. مورد الكتان المصري عالي الجودة للأسواق الدولية">
-    <meta name="keywords" content="flax export, Egyptian flax, raw flax supplier, flax trading, كتان مصري, تصدير الكتان">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      ElMOHANDES - Premium Egyptian Flax Supplier | الـمـهـنـدس لتصدير الكتان
+    </title>
+    <meta
+      name="description"
+      content="Premium Egyptian flax supplier for international markets. High-quality raw flax export from Egypt. مورد الكتان المصري عالي الجودة للأسواق الدولية"
+    />
+    <meta
+      name="keywords"
+      content="flax export, Egyptian flax, raw flax supplier, flax trading, كتان مصري, تصدير الكتان"
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
-        .arabic { font-family: 'Cairo', sans-serif; }
-        .english { font-family: 'Roboto', sans-serif; }
-        .hero-bg { 
-            background: linear-gradient(rgba(101, 67, 33, 0.7), rgba(101, 67, 33, 0.7)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23D4A574" width="1200" height="600"/><g fill="%23654321" opacity="0.3"><circle cx="200" cy="150" r="80"/><circle cx="800" cy="300" r="120"/><circle cx="1000" cy="100" r="60"/><path d="M100,400 Q300,350 500,400 T900,400" stroke="%23228B22" stroke-width="8" fill="none"/><path d="M200,500 Q400,450 600,500 T1000,500" stroke="%23228B22" stroke-width="6" fill="none"/></g></svg>');
-            background-size: cover;
-            background-position: center;
+      .arabic {
+        font-family: "Cairo", sans-serif;
+      }
+      .english {
+        font-family: "Roboto", sans-serif;
+      }
+      .hero-bg {
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.204),
+            rgba(12, 12, 12, 0.7)
+          ),
+          url(assets/1.jfif);
+        background-size: cover;
+        background-position: center;
+      }
+      .flax-pattern {
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><g fill="%23F5F5DC" opacity="0.1"><path d="M30,10 Q35,20 30,30 Q25,20 30,10 M30,30 Q35,40 30,50 Q25,40 30,30"/></g></svg>');
+      }
+      .hidden {
+        display: none;
+      }
+      .fade-in {
+        animation: fadeIn 0.5s ease-in;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
         }
-        .flax-pattern {
-            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><g fill="%23F5F5DC" opacity="0.1"><path d="M30,10 Q35,20 30,30 Q25,20 30,10 M30,30 Q35,40 30,50 Q25,40 30,30"/></g></svg>');
+        to {
+          opacity: 1;
         }
-        .hidden { display: none; }
-        .fade-in { animation: fadeIn 0.5s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        
-        /* RTL Support */
-        [dir="rtl"] { text-align: right; }
-        [dir="rtl"] .flex { flex-direction: row-reverse; }
-        [dir="rtl"] .space-x-4 > * { margin-left: 1rem; margin-right: 0; }
-        [dir="rtl"] .space-x-6 > * { margin-left: 1.5rem; margin-right: 0; }
-        [dir="rtl"] .ml-4 { margin-left: 0; margin-right: 1rem; }
-        [dir="rtl"] .mr-4 { margin-right: 0; margin-left: 1rem; }
+      }
+
+      /* Advanced Animations */
+      .slide-up {
+        animation: slideUp 0.8s ease-out;
+      }
+      .slide-left {
+        animation: slideLeft 0.8s ease-out;
+      }
+      .slide-right {
+        animation: slideRight 0.8s ease-out;
+      }
+      .scale-in {
+        animation: scaleIn 0.6s ease-out;
+      }
+      .float {
+        animation: float 3s ease-in-out infinite;
+      }
+      .pulse-glow {
+        animation: pulseGlow 2s ease-in-out infinite;
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes scaleIn {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes pulseGlow {
+        0%,
+        100% {
+          box-shadow: 0 0 20px rgba(245, 158, 11, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 30px rgba(245, 158, 11, 0.8);
+        }
+      }
+
+      /* Video and Image Styles */
+      .video-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.05);
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        color: white;
+        padding: 1rem;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        transform: translateY(0);
+      }
+
+      /* RTL Support */
+      [dir="rtl"] {
+        text-align: right;
+      }
+      [dir="rtl"] .flex {
+        flex-direction: row-reverse;
+      }
+      [dir="rtl"] .space-x-4 > * {
+        margin-left: 1rem;
+        margin-right: 0;
+      }
+      [dir="rtl"] .space-x-6 > * {
+        margin-left: 1.5rem;
+        margin-right: 0;
+      }
+      [dir="rtl"] .ml-4 {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+      [dir="rtl"] .mr-4 {
+        margin-right: 0;
+        margin-left: 1rem;
+      }
     </style>
-</head>
-<body class="bg-stone-50 english" dir="ltr">
+  </head>
+  <body class="bg-stone-50 english" dir="ltr">
     <!-- Navigation -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0">
-                        <h1 class="text-2xl font-bold text-amber-800">
-                            <span class="en-content">Flax Export</span>
-                            <span class="ar-content hidden arabic">تصدير الكتان</span>
-                        </h1>
-                    </div>
-                </div>
-                
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-6">
-                        <a href="#home" class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 font-medium transition-colors">
-                            <span class="en-content">Home</span>
-                            <span class="ar-content hidden arabic">الرئيسية</span>
-                        </a>
-                        <a href="#about" class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 font-medium transition-colors">
-                            <span class="en-content">About</span>
-                            <span class="ar-content hidden arabic">عن الشركة</span>
-                        </a>
-                        <a href="#products" class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 font-medium transition-colors">
-                            <span class="en-content">Products</span>
-                            <span class="ar-content hidden arabic">المنتجات</span>
-                        </a>
-                        <a href="#services" class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 font-medium transition-colors">
-                            <span class="en-content">Services</span>
-                            <span class="ar-content hidden arabic">الخدمات</span>
-                        </a>
-                        <a href="#contact" class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 font-medium transition-colors">
-                            <span class="en-content">Contact</span>
-                            <span class="ar-content hidden arabic">اتصل بنا</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="flex items-center space-x-4">
-                    <button id="langToggle" class="flex items-center space-x-2 bg-amber-100 hover:bg-amber-200 px-3 py-2 rounded-lg transition-colors">
-                        <span class="text-xl">🇪🇬</span>
-                        <span class="font-medium text-amber-800">
-                            <span class="en-content">عربي</span>
-                            <span class="ar-content hidden arabic">English</span>
-                        </span>
-                    </button>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <h1 class="text-2xl font-bold text-amber-800">
+                <span class="en-content">ElMOHANDES</span>
+                <span class="ar-content hidden arabic">الـمـهـنـدس</span>
+              </h1>
             </div>
+          </div>
+
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-6">
+              <a
+                href="#home"
+                class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 font-medium transition-colors"
+              >
+                <span class="en-content">Home</span>
+                <span class="ar-content hidden arabic">الرئيسية</span>
+              </a>
+              <a
+                href="#about"
+                class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 font-medium transition-colors"
+              >
+                <span class="en-content">About</span>
+                <span class="ar-content hidden arabic">عن الشركة</span>
+              </a>
+              <a
+                href="#products"
+                class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 font-medium transition-colors"
+              >
+                <span class="en-content">Products</span>
+                <span class="ar-content hidden arabic">المنتجات</span>
+              </a>
+              <a
+                href="#services"
+                class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 font-medium transition-colors"
+              >
+                <span class="en-content">Services</span>
+                <span class="ar-content hidden arabic">الخدمات</span>
+              </a>
+              <a
+                href="#contact"
+                class="nav-link text-gray-700 hover:text-amber-800 px-3 py-2 font-medium transition-colors"
+              >
+                <span class="en-content">Contact</span>
+                <span class="ar-content hidden arabic">اتصل بنا</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex items-center space-x-4">
+            <button
+              id="langToggle"
+              class="flex items-center space-x-2 bg-amber-100 hover:bg-amber-200 px-3 py-2 rounded-lg transition-colors"
+            >
+        
+              <span class="font-medium text-amber-800">
+                <span class="en-content">عربي</span>
+                <span class="ar-content hidden arabic">English</span>
+              </span>
+            </button>
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg min-h-screen flex items-center">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
-                    <span class="en-content">Premium Egyptian Flax</span>
-                    <span class="ar-content hidden arabic">الكتان المصري الفاخر</span>
-                </h1>
-                <h2 class="text-2xl md:text-3xl text-amber-200 mb-8">
-                    <span class="en-content">For International Markets</span>
-                    <span class="ar-content hidden arabic">للأسواق العالمية</span>
-                </h2>
-                <p class="text-xl text-white mb-10 max-w-3xl mx-auto leading-relaxed">
-                    <span class="en-content">Supplying high-quality raw flax from the fertile lands of Egypt to importers and trading companies worldwide. Experience excellence in every shipment.</span>
-                    <span class="ar-content hidden arabic">نوفر الكتان الخام عالي الجودة من الأراضي الخصبة في مصر للمستوردين وشركات التجارة في جميع أنحاء العالم. اختبر التميز في كل شحنة.</span>
-                </p>
-                <button onclick="scrollToSection('contact')" class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all transform hover:scale-105 shadow-lg">
-                    <span class="en-content">Request a Quote</span>
-                    <span class="ar-content hidden arabic">اطلب عرض سعر</span>
-                </button>
-            </div>
+    <section
+      id="home"
+      class="hero-bg min-h-screen flex items-center relative overflow-hidden"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"
+      >
+        <div class="max-w-4xl mx-auto">
+          <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 slide-up">
+            <span class="en-content">Premium Egyptian Flax</span>
+            <span class="ar-content hidden arabic">الكتان المصري الفاخر</span>
+          </h1>
+          <h2
+            class="text-2xl md:text-3xl text-amber-200 mb-8 slide-up"
+            style="animation-delay: 0.2s"
+          >
+            <span class="en-content">For International Markets</span>
+            <span class="ar-content hidden arabic">للأسواق العالمية</span>
+          </h2>
+          <p
+            class="text-xl text-white mb-10 max-w-3xl mx-auto leading-relaxed slide-up"
+            style="animation-delay: 0.4s"
+          >
+            <span class="en-content"
+              >Supplying high-quality raw flax from the fertile lands of Egypt
+              to importers and trading companies worldwide. Experience
+              excellence in every shipment.</span
+            >
+            <span class="ar-content hidden arabic"
+              >نوفر الكتان الخام عالي الجودة من الأراضي الخصبة في مصر للمستوردين
+              وشركات التجارة في جميع أنحاء العالم. اختبر التميز في كل
+              شحنة.</span
+            >
+          </p>
+          <button
+            onclick="scrollToSection('contact')"
+            class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all transform hover:scale-105 shadow-lg pulse-glow slide-up"
+            style="animation-delay: 0.6s"
+          >
+            <span class="en-content">Request a Quote</span>
+            <span class="ar-content hidden arabic">اطلب عرض سعر</span>
+          </button>
         </div>
+      </div>
+
+      <!-- Floating Elements -->
+      <div
+        class="absolute top-20 left-10 w-16 h-16 bg-amber-400 rounded-full opacity-20 float"
+        style="animation-delay: 0s"
+      ></div>
+      <div
+        class="absolute top-40 right-20 w-12 h-12 bg-green-400 rounded-full opacity-30 float"
+        style="animation-delay: 1s"
+      ></div>
+      <div
+        class="absolute bottom-32 left-1/4 w-20 h-20 bg-yellow-400 rounded-full opacity-15 float"
+        style="animation-delay: 2s"
+      ></div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                    <span class="en-content">About Flax Export</span>
-                    <span class="ar-content hidden arabic">عن لتصدير الكتان</span>
-                </h2>
-                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <div class="w-full h-96 bg-gradient-to-br from-amber-100 to-green-100 rounded-lg flex items-center justify-center">
-                        <svg class="w-48 h-48 text-amber-600" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                        </svg>
-                    </div>
-                </div>
-                
-                <div class="space-y-6">
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        <span class="en-content">Based in the heart of Egypt's agricultural region, Mohamed Flax Export has been a trusted supplier of premium raw flax for over 15 years. We specialize in sourcing the finest quality flax from local farmers who have perfected their cultivation techniques over generations.</span>
-                        <span class="ar-content hidden arabic">تقع شركة محمد لتصدير الكتان في قلب المنطقة الزراعية في مصر، وقد كانت مورداً موثوقاً للكتان الخام الفاخر لأكثر من 15 عاماً. نحن متخصصون في الحصول على أجود أنواع الكتان من المزارعين المحليين الذين أتقنوا تقنيات الزراعة عبر الأجيال.</span>
-                    </p>
-                    
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="text-center p-4 bg-amber-50 rounded-lg">
-                            <div class="text-3xl font-bold text-amber-600 mb-2">15+</div>
-                            <div class="text-gray-700">
-                                <span class="en-content">Years Experience</span>
-                                <span class="ar-content hidden arabic">سنة خبرة</span>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 bg-green-50 rounded-lg">
-                            <div class="text-3xl font-bold text-green-600 mb-2">50+</div>
-                            <div class="text-gray-700">
-                                <span class="en-content">Countries Served</span>
-                                <span class="ar-content hidden arabic">دولة نخدمها</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        <span class="en-content">Our commitment to quality, reliability, and export readiness has made us a preferred partner for importers and trading companies across Europe, Asia, and the Americas. We ensure every shipment meets international standards and arrives fresh and ready for processing.</span>
-                        <span class="ar-content hidden arabic">إن التزامنا بالجودة والموثوقية والاستعداد للتصدير جعلنا شريكاً مفضلاً للمستوردين وشركات التجارة في أوروبا وآسيا والأمريكتين. نضمن أن كل شحنة تلبي المعايير الدولية وتصل طازجة وجاهزة للمعالجة.</span>
-                    </p>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4 animate-on-scroll">
+            <span class="en-content">About ElMOHANDES</span>
+            <span class="ar-content hidden arabic">عن الـمـهـنـدس</span>
+          </h2>
+          <div
+            class="w-24 h-1 bg-amber-600 mx-auto animate-on-scroll"
+            style="animation-delay: 0.2s"
+          ></div>
         </div>
+
+        <!-- Video Showcase Section -->
+        <div class="mb-16">
+          <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-gray-900 mb-4 animate-on-scroll">
+              <span class="en-content">See Our Process</span>
+              <span class="ar-content hidden arabic">شاهد عمليتنا</span>
+            </h3>
+            <p
+              class="text-lg text-gray-600 animate-on-scroll"
+              style="animation-delay: 0.2s"
+            >
+              <span class="en-content"
+                >From field to export - witness the quality of our Egyptian
+                flax</span
+              >
+              <span class="ar-content hidden arabic"
+                >من الحقل إلى التصدير - اشهد جودة الكتان المصري</span
+              >
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="video-container animate-on-scroll">
+              <div
+                class="bg-gradient-to-br from-amber-100 to-green-100 h-64 rounded-lg flex items-center justify-center relative overflow-hidden"
+              >
+                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                <div class="text-center z-10">
+                  <div
+                    class="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:bg-opacity-100 transition-all"
+                  >
+                    <svg
+                      class="w-8 h-8 text-amber-600 ml-1"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                    </svg>
+                  </div>
+                  <p class="text-white font-semibold">
+                    <span class="en-content">Flax Fields & Harvesting</span>
+                    <span class="ar-content hidden arabic"
+                      >حقول الكتان والحصاد</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="video-container animate-on-scroll"
+              style="animation-delay: 0.2s"
+            >
+              <div
+                class="bg-gradient-to-br from-green-100 to-blue-100 h-64 rounded-lg flex items-center justify-center relative overflow-hidden"
+              >
+                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                <div class="text-center z-10">
+                  <div
+                    class="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center mx-auto mb-4 cursor-pointer hover:bg-opacity-100 transition-all"
+                  >
+                    <svg
+                      class="w-8 h-8 text-green-600 ml-1"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                    </svg>
+                  </div>
+                  <p class="text-white font-semibold">
+                    <span class="en-content">Processing & Packaging</span>
+                    <span class="ar-content hidden arabic"
+                      >المعالجة والتعبئة</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="animate-on-scroll">
+            <div
+              class="w-full h-96 bg-gradient-to-br from-amber-100 to-green-100 rounded-lg flex items-center justify-center"
+            >
+              <svg
+                class="w-48 h-48 text-amber-600"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div
+            class="space-y-6 animate-on-scroll"
+            style="animation-delay: 0.2s"
+          >
+            <p class="text-lg text-gray-700 leading-relaxed">
+              <span class="en-content"
+                >Based in the heart of Egypt's agricultural region, ElMOHANDES
+                has been a trusted supplier of premium raw flax for over 15
+                years. We specialize in sourcing the finest quality flax from
+                local farmers who have perfected their cultivation techniques
+                over generations.</span
+              >
+              <span class="ar-content hidden arabic"
+                >تقع شركة الـمـهـنـدس في قلب المنطقة الزراعية في مصر، وقد كانت
+                مورداً موثوقاً للكتان الخام الفاخر لأكثر من 15 عاماً. نحن
+                متخصصون في الحصول على أجود أنواع الكتان من المزارعين المحليين
+                الذين أتقنوا تقنيات الزراعة عبر الأجيال.</span
+              >
+            </p>
+
+            <div class="grid grid-cols-2 gap-6">
+              <div
+                class="text-center p-4 bg-amber-50 rounded-lg scale-in"
+                style="animation-delay: 0.4s"
+              >
+                <div class="text-3xl font-bold text-amber-600 mb-2">15+</div>
+                <div class="text-gray-700">
+                  <span class="en-content">Years Experience</span>
+                  <span class="ar-content hidden arabic">سنة خبرة</span>
+                </div>
+              </div>
+              <div
+                class="text-center p-4 bg-green-50 rounded-lg scale-in"
+                style="animation-delay: 0.6s"
+              >
+                <div class="text-3xl font-bold text-green-600 mb-2">50+</div>
+                <div class="text-gray-700">
+                  <span class="en-content">Countries Served</span>
+                  <span class="ar-content hidden arabic">دولة نخدمها</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-lg text-gray-700 leading-relaxed">
+              <span class="en-content"
+                >Our commitment to quality, reliability, and export readiness
+                has made us a preferred partner for importers and trading
+                companies across Europe, Asia, and the Americas. We ensure every
+                shipment meets international standards and arrives fresh and
+                ready for processing.</span
+              >
+              <span class="ar-content hidden arabic"
+                >إن التزامنا بالجودة والموثوقية والاستعداد للتصدير جعلنا شريكاً
+                مفضلاً للمستوردين وشركات التجارة في أوروبا وآسيا والأمريكتين.
+                نضمن أن كل شحنة تلبي المعايير الدولية وتصل طازجة وجاهزة
+                للمعالجة.</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Products Section -->
     <section id="products" class="py-20 bg-stone-100 flax-pattern">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                    <span class="en-content">Our Premium Flax Products</span>
-                    <span class="ar-content hidden arabic">منتجات الكتان الفاخرة</span>
-                </h2>
-                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8">
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-bold text-amber-800 mb-4">
-                            <span class="en-content">Product Specifications</span>
-                            <span class="ar-content hidden arabic">مواصفات المنتج</span>
-                        </h3>
-                        
-                        <div class="space-y-4">
-                            <div class="flex justify-between border-b pb-2">
-                                <span class="font-medium text-gray-700">
-                                    <span class="en-content">Type:</span>
-                                    <span class="ar-content hidden arabic">النوع:</span>
-                                </span>
-                                <span class="text-gray-900">
-                                    <span class="en-content">Raw Egyptian Flax</span>
-                                    <span class="ar-content hidden arabic">الكتان المصري الخام</span>
-                                </span>
-                            </div>
-                            
-                            <div class="flex justify-between border-b pb-2">
-                                <span class="font-medium text-gray-700">
-                                    <span class="en-content">Purity Level:</span>
-                                    <span class="ar-content hidden arabic">مستوى النقاء:</span>
-                                </span>
-                                <span class="text-gray-900">98-99%</span>
-                            </div>
-                            
-                            <div class="flex justify-between border-b pb-2">
-                                <span class="font-medium text-gray-700">
-                                    <span class="en-content">Moisture:</span>
-                                    <span class="ar-content hidden arabic">الرطوبة:</span>
-                                </span>
-                                <span class="text-gray-900">8-12%</span>
-                            </div>
-                            
-                            <div class="flex justify-between border-b pb-2">
-                                <span class="font-medium text-gray-700">
-                                    <span class="en-content">Packaging:</span>
-                                    <span class="ar-content hidden arabic">التعبئة:</span>
-                                </span>
-                                <span class="text-gray-900">
-                                    <span class="en-content">Bales 200-250kg</span>
-                                    <span class="ar-content hidden arabic">بالات 200-250 كيلو</span>
-                                </span>
-                            </div>
-                            
-                            <div class="flex justify-between">
-                                <span class="font-medium text-gray-700">
-                                    <span class="en-content">Monthly Capacity:</span>
-                                    <span class="ar-content hidden arabic">الطاقة الشهرية:</span>
-                                </span>
-                                <span class="text-gray-900">
-                                    <span class="en-content">500-1000 tons</span>
-                                    <span class="ar-content hidden arabic">500-1000 طن</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="flex space-x-4">
-                        <button onclick="scrollToSection('contact')" class="flex-1 bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-                            <span class="en-content">Request Sample</span>
-                            <span class="ar-content hidden arabic">اطلب عينة</span>
-                        </button>
-                        <button onclick="scrollToSection('contact')" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-                            <span class="en-content">Full Order</span>
-                            <span class="ar-content hidden arabic">طلب كامل</span>
-                        </button>
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-gradient-to-br from-amber-200 to-amber-300 h-48 rounded-lg flex items-center justify-center">
-                        <svg class="w-24 h-24 text-amber-800" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z"/>
-                        </svg>
-                    </div>
-                    <div class="bg-gradient-to-br from-green-200 to-green-300 h-48 rounded-lg flex items-center justify-center">
-                        <svg class="w-24 h-24 text-green-800" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
-                        </svg>
-                    </div>
-                    <div class="bg-gradient-to-br from-yellow-200 to-yellow-300 h-48 rounded-lg flex items-center justify-center col-span-2">
-                        <svg class="w-32 h-32 text-yellow-800" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12,2L13.09,8.26L22,9L13.09,9.74L12,16L10.91,9.74L2,9L10.91,8.26L12,2M12,21L10.91,14.74L2,14L10.91,13.26L12,7L13.09,13.26L22,14L13.09,14.74L12,21Z"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4 animate-on-scroll">
+            <span class="en-content">Our Premium Flax Products</span>
+            <span class="ar-content hidden arabic">منتجات الكتان الفاخرة</span>
+          </h2>
+          <div
+            class="w-24 h-1 bg-amber-600 mx-auto animate-on-scroll"
+            style="animation-delay: 0.2s"
+          ></div>
         </div>
+
+        <!-- Product Image Gallery -->
+        <div class="mb-16">
+          <h3
+            class="text-2xl font-bold text-center text-gray-900 mb-8 animate-on-scroll"
+          >
+            <span class="en-content">Product Gallery</span>
+            <span class="ar-content hidden arabic">معرض المنتجات</span>
+          </h3>
+
+          <div class="image-gallery">
+            <div class="gallery-item animate-on-scroll">
+              <div
+                class="bg-gradient-to-br from-amber-200 to-yellow-300 h-64 rounded-lg flex items-center justify-center relative"
+              >
+                <img src="assets/6.jfif" alt="Raw Flax Fibers">
+                <div class="gallery-overlay">
+                  <h4 class="font-bold mb-2">
+                    <span class="en-content">Raw Flax Fibers</span>
+                    <span class="ar-content hidden arabic"
+                      >ألياف الكتان الخام</span
+                    >
+                  </h4>
+                  <p class="text-sm">
+                    <span class="en-content"
+                      >Premium quality raw flax ready for processing</span
+                    >
+                    <span class="ar-content hidden arabic"
+                      >كتان خام عالي الجودة جاهز للمعالجة</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="gallery-item animate-on-scroll"
+              style="animation-delay: 0.2s"
+            >
+              <div
+                class="bg-gradient-to-br from-green-200 to-emerald-300 h-64 rounded-lg flex items-center justify-center relative"
+              >
+                <img src="assets/4.jfif" alt="">
+                <div class="gallery-overlay">
+                  <h4 class="font-bold mb-2">
+                    <span class="en-content">Flax Seeds</span>
+                    <span class="ar-content hidden arabic">بذور الكتان</span>
+                  </h4>
+                  <p class="text-sm">
+                    <span class="en-content"
+                      >High-quality flax seeds for various applications</span
+                    >
+                    <span class="ar-content hidden arabic"
+                      >بذور كتان عالية الجودة لتطبيقات متنوعة</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="gallery-item animate-on-scroll"
+              style="animation-delay: 0.4s"
+            >
+              <div
+                class="bg-gradient-to-br from-blue-200 to-indigo-300 h-64 rounded-lg flex items-center justify-center relative"
+              >
+                <img src="assets/1.jfif" alt="">
+                <div class="gallery-overlay">
+                  <h4 class="font-bold mb-2">
+                    <span class="en-content">Packaging Process</span>
+                    <span class="ar-content hidden arabic">عملية التعبئة</span>
+                  </h4>
+                  <p class="text-sm">
+                    <span class="en-content"
+                      >Professional packaging for international shipping</span
+                    >
+                    <span class="ar-content hidden arabic"
+                      >تعبئة مهنية للشحن الدولي</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="gallery-item animate-on-scroll"
+              style="animation-delay: 0.6s"
+            >
+              <div
+                class="bg-gradient-to-br from-purple-200 to-pink-300 h-64 rounded-lg flex items-center justify-center relative"
+              >
+                 <img src="assets/2.jfif" alt="">
+                <div class="gallery-overlay">
+                  <h4 class="font-bold mb-2">
+                    <span class="en-content">Quality Control</span>
+                    <span class="ar-content hidden arabic">مراقبة الجودة</span>
+                  </h4>
+                  <p class="text-sm">
+                    <span class="en-content"
+                      >Rigorous quality testing and certification</span
+                    >
+                    <span class="ar-content hidden arabic"
+                      >اختبار صارم للجودة والشهادات</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+              <h3 class="text-2xl font-bold text-amber-800 mb-4">
+                <span class="en-content">Product Specifications</span>
+                <span class="ar-content hidden arabic">مواصفات المنتج</span>
+              </h3>
+
+              <div class="space-y-4">
+                <div class="flex justify-between border-b pb-2">
+                  <span class="font-medium text-gray-700">
+                    <span class="en-content">Type:</span>
+                    <span class="ar-content hidden arabic">النوع:</span>
+                  </span>
+                  <span class="text-gray-900">
+                    <span class="en-content">Raw Egyptian Flax</span>
+                    <span class="ar-content hidden arabic"
+                      >الكتان المصري الخام</span
+                    >
+                  </span>
+                </div>
+
+                <div class="flex justify-between border-b pb-2">
+                  <span class="font-medium text-gray-700">
+                    <span class="en-content">Purity Level:</span>
+                    <span class="ar-content hidden arabic">مستوى النقاء:</span>
+                  </span>
+                  <span class="text-gray-900">98-99%</span>
+                </div>
+
+                <div class="flex justify-between border-b pb-2">
+                  <span class="font-medium text-gray-700">
+                    <span class="en-content">Moisture:</span>
+                    <span class="ar-content hidden arabic">الرطوبة:</span>
+                  </span>
+                  <span class="text-gray-900">8-12%</span>
+                </div>
+
+                <div class="flex justify-between border-b pb-2">
+                  <span class="font-medium text-gray-700">
+                    <span class="en-content">Packaging:</span>
+                    <span class="ar-content hidden arabic">التعبئة:</span>
+                  </span>
+                  <span class="text-gray-900">
+                    <span class="en-content">Bales 200-250kg</span>
+                    <span class="ar-content hidden arabic"
+                      >بالات 200-250 كيلو</span
+                    >
+                  </span>
+                </div>
+
+                <div class="flex justify-between">
+                  <span class="font-medium text-gray-700">
+                    <span class="en-content">Monthly Capacity:</span>
+                    <span class="ar-content hidden arabic"
+                      >الطاقة الشهرية:</span
+                    >
+                  </span>
+                  <span class="text-gray-900">
+                    <span class="en-content">500-1000 tons</span>
+                    <span class="ar-content hidden arabic">500-1000 طن</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex space-x-4">
+              <button
+                onclick="scrollToSection('contact')"
+                class="flex-1 bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+              >
+                <span class="en-content">Request Sample</span>
+                <span class="ar-content hidden arabic">اطلب عينة</span>
+              </button>
+              <button
+                onclick="scrollToSection('contact')"
+                class="flex-1 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+              >
+                <span class="en-content">Full Order</span>
+                <span class="ar-content hidden arabic">طلب كامل</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div
+              class="bg-gradient-to-br from-amber-200 to-amber-300 h-48 rounded-lg flex items-center justify-center"
+            >
+              <svg
+                class="w-24 h-24 text-amber-800"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,2A3,3 0 0,1 15,5V11A3,3 0 0,1 12,14A3,3 0 0,1 9,11V5A3,3 0 0,1 12,2M19,11C19,14.53 16.39,17.44 13,17.93V21H11V17.93C7.61,17.44 5,14.53 5,11H7A5,5 0 0,0 12,16A5,5 0 0,0 17,11H19Z"
+                />
+              </svg>
+            </div>
+            <div
+              class="bg-gradient-to-br from-green-200 to-green-300 h-48 rounded-lg flex items-center justify-center"
+            >
+              <svg
+                class="w-24 h-24 text-green-800"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"
+                />
+              </svg>
+            </div>
+            <div
+              class="bg-gradient-to-br from-yellow-200 to-yellow-300 h-48 rounded-lg flex items-center justify-center col-span-2"
+            >
+              <svg
+                class="w-32 h-32 text-yellow-800"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,2L13.09,8.26L22,9L13.09,9.74L12,16L10.91,9.74L2,9L10.91,8.26L12,2M12,21L10.91,14.74L2,14L10.91,13.26L12,7L13.09,13.26L22,14L13.09,14.74L12,21Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                    <span class="en-content">Our Services</span>
-                    <span class="ar-content hidden arabic">خدماتنا</span>
-                </h2>
-                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center p-6 bg-amber-50 rounded-lg hover:shadow-lg transition-shadow">
-                    <div class="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6Z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">
-                        <span class="en-content">Flax Sourcing</span>
-                        <span class="ar-content hidden arabic">توريد الكتان</span>
-                    </h3>
-                    <p class="text-gray-600">
-                        <span class="en-content">Direct sourcing from trusted Egyptian farmers with quality assurance</span>
-                        <span class="ar-content hidden arabic">التوريد المباشر من المزارعين المصريين الموثوقين مع ضمان الجودة</span>
-                    </p>
-                </div>
-                
-                <div class="text-center p-6 bg-green-50 rounded-lg hover:shadow-lg transition-shadow">
-                    <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">
-                        <span class="en-content">Quality Packaging</span>
-                        <span class="ar-content hidden arabic">التعبئة عالية الجودة</span>
-                    </h3>
-                    <p class="text-gray-600">
-                        <span class="en-content">Professional packaging solutions for safe international shipping</span>
-                        <span class="ar-content hidden arabic">حلول التعبئة المهنية للشحن الدولي الآمن</span>
-                    </p>
-                </div>
-                
-                <div class="text-center p-6 bg-blue-50 rounded-lg hover:shadow-lg transition-shadow">
-                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">
-                        <span class="en-content">Sample Preparation</span>
-                        <span class="ar-content hidden arabic">إعداد العينات</span>
-                    </h3>
-                    <p class="text-gray-600">
-                        <span class="en-content">Fast sample preparation and shipping for quality evaluation</span>
-                        <span class="ar-content hidden arabic">إعداد وشحن العينات السريع لتقييم الجودة</span>
-                    </p>
-                </div>
-                
-                <div class="text-center p-6 bg-purple-50 rounded-lg hover:shadow-lg transition-shadow">
-                    <div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6Z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">
-                        <span class="en-content">Export Coordination</span>
-                        <span class="ar-content hidden arabic">تنسيق التصدير</span>
-                    </h3>
-                    <p class="text-gray-600">
-                        <span class="en-content">Complete export coordination through Egyptian export companies</span>
-                        <span class="ar-content hidden arabic">تنسيق التصدير الكامل من خلال شركات التصدير المصرية</span>
-                    </p>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4 animate-on-scroll">
+            <span class="en-content">Our Services</span>
+            <span class="ar-content hidden arabic">خدماتنا</span>
+          </h2>
+          <div
+            class="w-24 h-1 bg-amber-600 mx-auto animate-on-scroll"
+            style="animation-delay: 0.2s"
+          ></div>
         </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="text-center p-6 bg-amber-50 rounded-lg hover:shadow-lg transition-all transform hover:scale-105 animate-on-scroll"
+          >
+            <div
+              class="w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 float"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6Z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              <span class="en-content">Flax Sourcing</span>
+              <span class="ar-content hidden arabic">توريد الكتان</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="en-content"
+                >Direct sourcing from trusted Egyptian farmers with quality
+                assurance</span
+              >
+              <span class="ar-content hidden arabic"
+                >التوريد المباشر من المزارعين المصريين الموثوقين مع ضمان
+                الجودة</span
+              >
+            </p>
+          </div>
+
+          <div
+            class="text-center p-6 bg-green-50 rounded-lg hover:shadow-lg transition-all transform hover:scale-105 animate-on-scroll"
+            style="animation-delay: 0.2s"
+          >
+            <div
+              class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4 float"
+              style="animation-delay: 0.5s"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M11,16.5L18,9.5L16.59,8.09L11,13.67L7.91,10.59L6.5,12L11,16.5Z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              <span class="en-content">Quality Packaging</span>
+              <span class="ar-content hidden arabic">التعبئة عالية الجودة</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="en-content"
+                >Professional packaging solutions for safe international
+                shipping</span
+              >
+              <span class="ar-content hidden arabic"
+                >حلول التعبئة المهنية للشحن الدولي الآمن</span
+              >
+            </p>
+          </div>
+
+          <div
+            class="text-center p-6 bg-blue-50 rounded-lg hover:shadow-lg transition-all transform hover:scale-105 animate-on-scroll"
+            style="animation-delay: 0.4s"
+          >
+            <div
+              class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 float"
+              style="animation-delay: 1s"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              <span class="en-content">Sample Preparation</span>
+              <span class="ar-content hidden arabic">إعداد العينات</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="en-content"
+                >Fast sample preparation and shipping for quality
+                evaluation</span
+              >
+              <span class="ar-content hidden arabic"
+                >إعداد وشحن العينات السريع لتقييم الجودة</span
+              >
+            </p>
+          </div>
+
+          <div
+            class="text-center p-6 bg-purple-50 rounded-lg hover:shadow-lg transition-all transform hover:scale-105 animate-on-scroll"
+            style="animation-delay: 0.6s"
+          >
+            <div
+              class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 float"
+              style="animation-delay: 1.5s"
+            >
+              <svg
+                class="w-8 h-8 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6Z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-3">
+              <span class="en-content">Export Coordination</span>
+              <span class="ar-content hidden arabic">تنسيق التصدير</span>
+            </h3>
+            <p class="text-gray-600">
+              <span class="en-content"
+                >Complete export coordination through Egyptian export
+                companies</span
+              >
+              <span class="ar-content hidden arabic"
+                >تنسيق التصدير الكامل من خلال شركات التصدير المصرية</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-stone-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                    <span class="en-content">Contact Us</span>
-                    <span class="ar-content hidden arabic">اتصل بنا</span>
-                </h2>
-                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
-            </div>
-            
-            <div class="grid lg:grid-cols-2 gap-12">
-                <div class="space-y-8">
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6">
-                            <span class="en-content">Get in Touch</span>
-                            <span class="ar-content hidden arabic">تواصل معنا</span>
-                        </h3>
-                        
-                        <div class="space-y-4">
-                            <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M16.75,13.96C17,14.09 17.16,14.16 17.21,14.26C17.27,14.37 17.25,14.87 17.04,15.44C16.83,16 16.07,16.5 15.5,16.61C14.93,16.72 14.21,16.71 13.38,16.53C12.55,16.35 11.54,16.07 10.47,15.44C9.4,14.81 8.53,14.05 7.86,13.27C7.19,12.49 6.78,11.78 6.85,11.25C6.93,10.71 7.34,10.02 7.86,9.5C8.15,9.2 8.5,9.04 8.84,9.04C8.97,9.04 9.1,9.07 9.21,9.12C9.44,9.23 9.56,9.45 9.66,9.63C9.77,9.81 9.85,9.97 9.94,10.16C10.04,10.35 10.14,10.55 10.26,10.74C10.38,10.93 10.5,11.1 10.59,11.27C10.68,11.44 10.73,11.6 10.73,11.75C10.73,11.89 10.69,12.02 10.6,12.13C10.51,12.24 10.38,12.33 10.22,12.4C10.06,12.47 9.87,12.52 9.66,12.55C9.45,12.58 9.23,12.59 9,12.59C8.77,12.59 8.55,12.58 8.34,12.55C8.13,12.52 7.94,12.47 7.78,12.4C7.62,12.33 7.49,12.24 7.4,12.13C7.31,12.02 7.27,11.89 7.27,11.75C7.27,11.6 7.32,11.44 7.41,11.27C7.5,11.1 7.62,10.93 7.74,10.74C7.86,10.55 7.96,10.35 8.06,10.16C8.15,9.97 8.23,9.81 8.34,9.63C8.44,9.45 8.56,9.23 8.79,9.12C8.9,9.07 9.03,9.04 9.16,9.04C9.5,9.04 9.85,9.2 10.14,9.5C10.66,10.02 11.07,10.71 11.15,11.25C11.22,11.78 10.81,12.49 10.14,13.27C9.47,14.05 8.6,14.81 7.53,15.44C6.46,16.07 5.45,16.35 4.62,16.53C3.79,16.71 3.07,16.72 2.5,16.61C1.93,16.5 1.17,16 0.96,15.44C0.75,14.87 0.73,14.37 0.79,14.26C0.84,14.16 1,14.09 1.25,13.96L16.75,13.96M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2Z"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p class="font-medium text-gray-900">WhatsApp</p>
-                                    <a href="https://wa.me/201234567890" class="text-green-600 hover:text-green-700">+20 123 456 7890</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p class="font-medium text-gray-900">Email</p>
-                                    <a href="mailto:info@mohamedflax.com" class="text-blue-600 hover:text-blue-700">info@mohamedflax.com</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-center space-x-4">
-                                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
-                                    <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p class="font-medium text-gray-900">
-                                        <span class="en-content">Location</span>
-                                        <span class="ar-content hidden arabic">الموقع</span>
-                                    </p>
-                                    <p class="text-gray-600">
-                                        <span class="en-content">Cairo, Egypt</span>
-                                        <span class="ar-content hidden arabic">القاهرة، مصر</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <a href="https://wa.me/201234567890" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M16.75,13.96C17,14.09 17.16,14.16 17.21,14.26C17.27,14.37 17.25,14.87 17.04,15.44C16.83,16 16.07,16.5 15.5,16.61C14.93,16.72 14.21,16.71 13.38,16.53C12.55,16.35 11.54,16.07 10.47,15.44C9.4,14.81 8.53,14.05 7.86,13.27C7.19,12.49 6.78,11.78 6.85,11.25C6.93,10.71 7.34,10.02 7.86,9.5C8.15,9.2 8.5,9.04 8.84,9.04C8.97,9.04 9.1,9.07 9.21,9.12C9.44,9.23 9.56,9.45 9.66,9.63C9.77,9.81 9.85,9.97 9.94,10.16C10.04,10.35 10.14,10.55 10.26,10.74C10.38,10.93 10.5,11.1 10.59,11.27C10.68,11.44 10.73,11.6 10.73,11.75C10.73,11.89 10.69,12.02 10.6,12.13C10.51,12.24 10.38,12.33 10.22,12.4C10.06,12.47 9.87,12.52 9.66,12.55C9.45,12.58 9.23,12.59 9,12.59C8.77,12.59 8.55,12.58 8.34,12.55C8.13,12.52 7.94,12.47 7.78,12.4C7.62,12.33 7.49,12.24 7.4,12.13C7.31,12.02 7.27,11.89 7.27,11.75C7.27,11.6 7.32,11.44 7.41,11.27C7.5,11.1 7.62,10.93 7.74,10.74C7.86,10.55 7.96,10.35 8.06,10.16C8.15,9.97 8.23,9.81 8.34,9.63C8.44,9.45 8.56,9.23 8.79,9.12C8.9,9.07 9.03,9.04 9.16,9.04C9.5,9.04 9.85,9.2 10.14,9.5C10.66,10.02 11.07,10.71 11.15,11.25C11.22,11.78 10.81,12.49 10.14,13.27C9.47,14.05 8.6,14.81 7.53,15.44C6.46,16.07 5.45,16.35 4.62,16.53C3.79,16.71 3.07,16.72 2.5,16.61C1.93,16.5 1.17,16 0.96,15.44C0.75,14.87 0.73,14.37 0.79,14.26C0.84,14.16 1,14.09 1.25,13.96L16.75,13.96M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2Z"/>
-                                </svg>
-                                <span>
-                                    <span class="en-content">Chat on WhatsApp</span>
-                                    <span class="ar-content hidden arabic">تحدث عبر واتساب</span>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-8 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">
-                        <span class="en-content">Send Message</span>
-                        <span class="ar-content hidden arabic">أرسل رسالة</span>
-                    </h3>
-                    
-                    <form id="contactForm" class="space-y-6">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                <span class="en-content">Name</span>
-                                <span class="ar-content hidden arabic">الاسم</span>
-                            </label>
-                            <input type="text" id="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                <span class="en-content">Email</span>
-                                <span class="ar-content hidden arabic">البريد الإلكتروني</span>
-                            </label>
-                            <input type="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                <span class="en-content">Country</span>
-                                <span class="ar-content hidden arabic">البلد</span>
-                            </label>
-                            <input type="text" id="country" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent">
-                        </div>
-                        
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">
-                                <span class="en-content">Message</span>
-                                <span class="ar-content hidden arabic">الرسالة</span>
-                            </label>
-                            <textarea id="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-                            <span class="en-content">Send Message</span>
-                            <span class="ar-content hidden arabic">أرسل الرسالة</span>
-                        </button>
-                    </form>
-                </div>
-            </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4 animate-on-scroll">
+            <span class="en-content">Contact Us</span>
+            <span class="ar-content hidden arabic">اتصل بنا</span>
+          </h2>
+          <div
+            class="w-24 h-1 bg-amber-600 mx-auto animate-on-scroll"
+            style="animation-delay: 0.2s"
+          ></div>
         </div>
+
+        <!-- Interactive Map Section -->
+        <div class="mb-16">
+          <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4 animate-on-scroll">
+              <span class="en-content">Our Location in Egypt</span>
+              <span class="ar-content hidden arabic">موقعنا في مصر</span>
+            </h3>
+            <p
+              class="text-lg text-gray-600 animate-on-scroll"
+              style="animation-delay: 0.2s"
+            >
+              <span class="en-content"
+                >Located in the heart of Egypt's agricultural region for optimal
+                flax sourcing</span
+              >
+              <span class="ar-content hidden arabic"
+                >يقع في قلب المنطقة الزراعية في مصر للحصول على أفضل مصادر
+                الكتان</span
+              >
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-lg overflow-hidden animate-on-scroll"
+            style="animation-delay: 0.4s"
+          >
+            <div
+              class="h-96 bg-gradient-to-br from-green-100 to-blue-100 relative"
+            >
+              <!-- Egypt Map Representation -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="relative">
+                  <!-- Egypt outline -->
+                  <svg
+                    class="w-80 h-80 text-amber-600"
+                    fill="currentColor"
+                    viewBox="0 0 400 400"
+                  >
+                    <path
+                      d="M100,50 L300,50 L320,80 L350,120 L360,180 L340,220 L320,260 L280,300 L200,320 L120,300 L80,260 L60,220 L50,180 L60,120 L80,80 Z"
+                      opacity="0.3"
+                    />
+                  </svg>
+
+                  <!-- Location marker -->
+                  <div
+                    class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                  >
+                    <div
+                      class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center pulse-glow"
+                    >
+                      <svg
+                        class="w-5 h-5 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"
+                        />
+                      </svg>
+                    </div>
+                    <div
+                      class="absolute top-10 left-1/2 transform -translate-x-1/2 bg-white px-3 py-1 rounded shadow-lg"
+                    >
+                      <p class="text-sm font-semibold text-gray-900">
+                        <span class="en-content">ElMOHANDES</span>
+                        <span class="ar-content hidden arabic"
+                          >الـمـهـنـدس</span
+                        >
+                      </p>
+                      <p class="text-xs text-gray-600">
+                        <span class="en-content">Cairo, Egypt</span>
+                        <span class="ar-content hidden arabic"
+                          >الغربية، مصر</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Surrounding countries labels -->
+                  <div
+                    class="absolute -top-8 left-1/2 transform -translate-x-1/2 text-sm text-gray-500"
+                  >
+                    <span class="en-content">Mediterranean Sea</span>
+                    <span class="ar-content hidden arabic">البحر المتوسط</span>
+                  </div>
+                  <div class="absolute bottom-0 right-0 text-sm text-gray-500">
+                    <span class="en-content">Red Sea</span>
+                    <span class="ar-content hidden arabic">البحر الأحمر</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Map overlay info -->
+              <div
+                class="absolute bottom-4 left-4 bg-white bg-opacity-90 p-4 rounded-lg"
+              >
+                <div class="flex items-center space-x-2 mb-2">
+                  <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                  <span class="text-sm font-medium">
+                    <span class="en-content">Production Facility</span>
+                    <span class="ar-content hidden arabic">منشأة الإنتاج</span>
+                  </span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span class="text-sm font-medium">
+                    <span class="en-content">Agricultural Region</span>
+                    <span class="ar-content hidden arabic"
+                      >المنطقة الزراعية</span
+                    >
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12">
+          <div class="space-y-8">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">
+                <span class="en-content">Get in Touch</span>
+                <span class="ar-content hidden arabic">تواصل معنا</span>
+              </h3>
+
+              <div class="space-y-4">
+                <div class="flex items-center space-x-4">
+                  <div
+                    class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-6 h-6 text-green-600"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M16.75,13.96C17,14.09 17.16,14.16 17.21,14.26C17.27,14.37 17.25,14.87 17.04,15.44C16.83,16 16.07,16.5 15.5,16.61C14.93,16.72 14.21,16.71 13.38,16.53C12.55,16.35 11.54,16.07 10.47,15.44C9.4,14.81 8.53,14.05 7.86,13.27C7.19,12.49 6.78,11.78 6.85,11.25C6.93,10.71 7.34,10.02 7.86,9.5C8.15,9.2 8.5,9.04 8.84,9.04C8.97,9.04 9.1,9.07 9.21,9.12C9.44,9.23 9.56,9.45 9.66,9.63C9.77,9.81 9.85,9.97 9.94,10.16C10.04,10.35 10.14,10.55 10.26,10.74C10.38,10.93 10.5,11.1 10.59,11.27C10.68,11.44 10.73,11.6 10.73,11.75C10.73,11.89 10.69,12.02 10.6,12.13C10.51,12.24 10.38,12.33 10.22,12.4C10.06,12.47 9.87,12.52 9.66,12.55C9.45,12.58 9.23,12.59 9,12.59C8.77,12.59 8.55,12.58 8.34,12.55C8.13,12.52 7.94,12.47 7.78,12.4C7.62,12.33 7.49,12.24 7.4,12.13C7.31,12.02 7.27,11.89 7.27,11.75C7.27,11.6 7.32,11.44 7.41,11.27C7.5,11.1 7.62,10.93 7.74,10.74C7.86,10.55 7.96,10.35 8.06,10.16C8.15,9.97 8.23,9.81 8.34,9.63C8.44,9.45 8.56,9.23 8.79,9.12C8.9,9.07 9.03,9.04 9.16,9.04C9.5,9.04 9.85,9.2 10.14,9.5C10.66,10.02 11.07,10.71 11.15,11.25C11.22,11.78 10.81,12.49 10.14,13.27C9.47,14.05 8.6,14.81 7.53,15.44C6.46,16.07 5.45,16.35 4.62,16.53C3.79,16.71 3.07,16.72 2.5,16.61C1.93,16.5 1.17,16 0.96,15.44C0.75,14.87 0.73,14.37 0.79,14.26C0.84,14.16 1,14.09 1.25,13.96L16.75,13.96M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2Z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-900">WhatsApp</p>
+                    <a
+                      href="https://wa.me/201554317640"
+                      class="text-green-600 hover:text-green-700"
+                      >+20 155 431 7640</a
+                    >
+                  </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                  <div
+                    class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-6 h-6 text-blue-600"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-900">Email</p>
+                    <a
+                      href="mailto:eng.mohamedsalama@gmail.com"
+                      class="text-blue-600 hover:text-blue-700"
+                      >eng.mohamedsalama68@gmail.com</a
+                    >
+                  </div>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                  <div
+                    class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-6 h-6 text-red-600"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p class="font-medium text-gray-900">
+                      <span class="en-content">Location</span>
+                      <span class="ar-content hidden arabic">الموقع</span>
+                    </p>
+                    <p class="text-gray-600">
+                      <span class="en-content">Gharbia, Egypt</span>
+                      <span class="ar-content hidden arabic">الغربية، مصر</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <a
+                  href="https://wa.me/201554317640"
+                  class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M16.75,13.96C17,14.09 17.16,14.16 17.21,14.26C17.27,14.37 17.25,14.87 17.04,15.44C16.83,16 16.07,16.5 15.5,16.61C14.93,16.72 14.21,16.71 13.38,16.53C12.55,16.35 11.54,16.07 10.47,15.44C9.4,14.81 8.53,14.05 7.86,13.27C7.19,12.49 6.78,11.78 6.85,11.25C6.93,10.71 7.34,10.02 7.86,9.5C8.15,9.2 8.5,9.04 8.84,9.04C8.97,9.04 9.1,9.07 9.21,9.12C9.44,9.23 9.56,9.45 9.66,9.63C9.77,9.81 9.85,9.97 9.94,10.16C10.04,10.35 10.14,10.55 10.26,10.74C10.38,10.93 10.5,11.1 10.59,11.27C10.68,11.44 10.73,11.6 10.73,11.75C10.73,11.89 10.69,12.02 10.6,12.13C10.51,12.24 10.38,12.33 10.22,12.4C10.06,12.47 9.87,12.52 9.66,12.55C9.45,12.58 9.23,12.59 9,12.59C8.77,12.59 8.55,12.58 8.34,12.55C8.13,12.52 7.94,12.47 7.78,12.4C7.62,12.33 7.49,12.24 7.4,12.13C7.31,12.02 7.27,11.89 7.27,11.75C7.27,11.6 7.32,11.44 7.41,11.27C7.5,11.1 7.62,10.93 7.74,10.74C7.86,10.55 7.96,10.35 8.06,10.16C8.15,9.97 8.23,9.81 8.34,9.63C8.44,9.45 8.56,9.23 8.79,9.12C8.9,9.07 9.03,9.04 9.16,9.04C9.5,9.04 9.85,9.2 10.14,9.5C10.66,10.02 11.07,10.71 11.15,11.25C11.22,11.78 10.81,12.49 10.14,13.27C9.47,14.05 8.6,14.81 7.53,15.44C6.46,16.07 5.45,16.35 4.62,16.53C3.79,16.71 3.07,16.72 2.5,16.61C1.93,16.5 1.17,16 0.96,15.44C0.75,14.87 0.73,14.37 0.79,14.26C0.84,14.16 1,14.09 1.25,13.96L16.75,13.96M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2Z"
+                    />
+                  </svg>
+                  <span>
+                    <span class="en-content">Chat on WhatsApp</span>
+                    <span class="ar-content hidden arabic"
+                      >تحدث عبر واتساب</span
+                    >
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">
+              <span class="en-content">Send Message</span>
+              <span class="ar-content hidden arabic">أرسل رسالة</span>
+            </h3>
+
+            <form id="contactForm" class="space-y-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                  <span class="en-content">Name</span>
+                  <span class="ar-content hidden arabic">الاسم</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                  <span class="en-content">Email</span>
+                  <span class="ar-content hidden arabic"
+                    >البريد الإلكتروني</span
+                  >
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                  <span class="en-content">Country</span>
+                  <span class="ar-content hidden arabic">البلد</span>
+                </label>
+                <input
+                  type="text"
+                  id="country"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                />
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">
+                  <span class="en-content">Message</span>
+                  <span class="ar-content hidden arabic">الرسالة</span>
+                </label>
+                <textarea
+                  id="message"
+                  rows="4"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+              >
+                <span class="en-content">Send Message</span>
+                <span class="ar-content hidden arabic">أرسل الرسالة</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="col-span-2">
-                    <h3 class="text-2xl font-bold text-amber-400 mb-4">
-                        <span class="en-content">Mohamed Flax Export</span>
-                        <span class="ar-content hidden arabic">محمد لتصدير الكتان</span>
-                    </h3>
-                    <p class="text-gray-300 mb-4">
-                        <span class="en-content">Your trusted partner for premium Egyptian flax export to international markets.</span>
-                        <span class="ar-content hidden arabic">شريكك الموثوق لتصدير الكتان المصري الفاخر إلى الأسواق الدولية.</span>
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">
-                        <span class="en-content">Quick Links</span>
-                        <span class="ar-content hidden arabic">روابط سريعة</span>
-                    </h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors">
-                            <span class="en-content">Home</span>
-                            <span class="ar-content hidden arabic">الرئيسية</span>
-                        </a></li>
-                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">
-                            <span class="en-content">About</span>
-                            <span class="ar-content hidden arabic">عن الشركة</span>
-                        </a></li>
-                        <li><a href="#products" class="text-gray-300 hover:text-white transition-colors">
-                            <span class="en-content">Products</span>
-                            <span class="ar-content hidden arabic">المنتجات</span>
-                        </a></li>
-                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">
-                            <span class="en-content">Services</span>
-                            <span class="ar-content hidden arabic">الخدمات</span>
-                        </a></li>
-                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors">
-                            <span class="en-content">Contact</span>
-                            <span class="ar-content hidden arabic">اتصل بنا</span>
-                        </a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">
-                        <span class="en-content">Contact Info</span>
-                        <span class="ar-content hidden arabic">معلومات الاتصال</span>
-                    </h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>+20 123 456 7890</li>
-                        <li>info@mohamedflax.com</li>
-                        <li>
-                            <span class="en-content">Cairo, Egypt</span>
-                            <span class="ar-content hidden arabic">القاهرة، مصر</span>
-                        </li>
-                    </ul>
-                </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="col-span-2">
+            <h3 class="text-2xl font-bold text-amber-400 mb-4">
+              <span class="en-content">ElMOHANDES</span>
+              <span class="ar-content hidden arabic">الـمـهـنـدس</span>
+            </h3>
+            <p class="text-gray-300 mb-4">
+              <span class="en-content"
+                >Your trusted partner for premium Egyptian flax export to
+                international markets.</span
+              >
+              <span class="ar-content hidden arabic"
+                >شريكك الموثوق لتصدير الكتان المصري الفاخر إلى الأسواق
+                الدولية.</span
+              >
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
             </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400">
-                    <span class="en-content">&copy; 2024 Mohamed Flax Export. All rights reserved.</span>
-                    <span class="ar-content hidden arabic">&copy; 2024 محمد لتصدير الكتان. جميع الحقوق محفوظة.</span>
-                </p>
-            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">
+              <span class="en-content">Quick Links</span>
+              <span class="ar-content hidden arabic">روابط سريعة</span>
+            </h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#home"
+                  class="text-gray-300 hover:text-white transition-colors"
+                >
+                  <span class="en-content">Home</span>
+                  <span class="ar-content hidden arabic">الرئيسية</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-300 hover:text-white transition-colors"
+                >
+                  <span class="en-content">About</span>
+                  <span class="ar-content hidden arabic">عن الشركة</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#products"
+                  class="text-gray-300 hover:text-white transition-colors"
+                >
+                  <span class="en-content">Products</span>
+                  <span class="ar-content hidden arabic">المنتجات</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-300 hover:text-white transition-colors"
+                >
+                  <span class="en-content">Services</span>
+                  <span class="ar-content hidden arabic">الخدمات</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-300 hover:text-white transition-colors"
+                >
+                  <span class="en-content">Contact</span>
+                  <span class="ar-content hidden arabic">اتصل بنا</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">
+              <span class="en-content">Contact Info</span>
+              <span class="ar-content hidden arabic">معلومات الاتصال</span>
+            </h4>
+            <ul class="space-y-2 text-gray-300">
+              <li>+20 155 431 7640</li>
+              <li>eng.mohamedsalama68@gmail.com</li>
+              <li>
+                <span class="en-content">Gharbia, Egypt</span>
+                <span class="ar-content hidden arabic">الغربية، مصر</span>
+              </li>
+            </ul>
+          </div>
         </div>
+
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p class="text-gray-400">
+            <span class="en-content"
+              >&copy; 2025 ElMOHANDES. All rights reserved.</span
+            >
+            <span class="ar-content hidden arabic"
+              >&copy; 2025 الـمـهـنـدس. جميع الحقوق محفوظة.</span
+            >
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script>
-        // Language Toggle Functionality
-        const langToggle = document.getElementById('langToggle');
-        const body = document.body;
-        const html = document.documentElement;
-        let isArabic = false;
+      // Language Toggle Functionality
+      const langToggle = document.getElementById("langToggle");
+      const body = document.body;
+      const html = document.documentElement;
+      let isArabic = false;
 
-        langToggle.addEventListener('click', function() {
-            isArabic = !isArabic;
-            
-            if (isArabic) {
-                // Switch to Arabic
-                body.classList.remove('english');
-                body.classList.add('arabic');
-                html.setAttribute('dir', 'rtl');
-                html.setAttribute('lang', 'ar');
-                
-                // Hide English content, show Arabic content
-                document.querySelectorAll('.en-content').forEach(el => el.classList.add('hidden'));
-                document.querySelectorAll('.ar-content').forEach(el => el.classList.remove('hidden'));
-            } else {
-                // Switch to English
-                body.classList.remove('arabic');
-                body.classList.add('english');
-                html.setAttribute('dir', 'ltr');
-                html.setAttribute('lang', 'en');
-                
-                // Hide Arabic content, show English content
-                document.querySelectorAll('.ar-content').forEach(el => el.classList.add('hidden'));
-                document.querySelectorAll('.en-content').forEach(el => el.classList.remove('hidden'));
-            }
-            
-            // Add fade-in animation
-            document.body.classList.add('fade-in');
-            setTimeout(() => document.body.classList.remove('fade-in'), 500);
-        });
+      langToggle.addEventListener("click", function () {
+        isArabic = !isArabic;
 
-        // Smooth scrolling for navigation links
-        function scrollToSection(sectionId) {
-            document.getElementById(sectionId).scrollIntoView({
-                behavior: 'smooth'
-            });
+        if (isArabic) {
+          // Switch to Arabic
+          body.classList.remove("english");
+          body.classList.add("arabic");
+          html.setAttribute("dir", "rtl");
+          html.setAttribute("lang", "ar");
+
+          // Hide English content, show Arabic content
+          document
+            .querySelectorAll(".en-content")
+            .forEach((el) => el.classList.add("hidden"));
+          document
+            .querySelectorAll(".ar-content")
+            .forEach((el) => el.classList.remove("hidden"));
+        } else {
+          // Switch to English
+          body.classList.remove("arabic");
+          body.classList.add("english");
+          html.setAttribute("dir", "ltr");
+          html.setAttribute("lang", "en");
+
+          // Hide Arabic content, show English content
+          document
+            .querySelectorAll(".ar-content")
+            .forEach((el) => el.classList.add("hidden"));
+          document
+            .querySelectorAll(".en-content")
+            .forEach((el) => el.classList.remove("hidden"));
         }
 
-        // Add smooth scrolling to all nav links
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                scrollToSection(targetId);
-            });
+        // Add fade-in animation
+        document.body.classList.add("fade-in");
+        setTimeout(() => document.body.classList.remove("fade-in"), 500);
+      });
+
+      // Smooth scrolling for navigation links
+      function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+
+      // Add smooth scrolling to all nav links
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href").substring(1);
+          scrollToSection(targetId);
+        });
+      });
+
+      // Contact form handling
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const country = document.getElementById("country").value;
+          const message = document.getElementById("message").value;
+
+          // Create WhatsApp message
+          const whatsappMessage = `Hello! I'm ${name} from ${country}. Email: ${email}. Message: ${message}`;
+          const whatsappUrl = `https://wa.me/201234567890?text=${encodeURIComponent(
+            whatsappMessage
+          )}`;
+
+          // Open WhatsApp
+          window.open(whatsappUrl, "_blank");
+
+          // Show success message
+          alert(
+            isArabic ? "تم إرسال رسالتك بنجاح!" : "Message sent successfully!"
+          );
+
+          // Reset form
+          this.reset();
         });
 
-        // Contact form handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const country = document.getElementById('country').value;
-            const message = document.getElementById('message').value;
-            
-            // Create WhatsApp message
-            const whatsappMessage = `Hello! I'm ${name} from ${country}. Email: ${email}. Message: ${message}`;
-            const whatsappUrl = `https://wa.me/201234567890?text=${encodeURIComponent(whatsappMessage)}`;
-            
-            // Open WhatsApp
-            window.open(whatsappUrl, '_blank');
-            
-            // Show success message
-            alert(isArabic ? 'تم إرسال رسالتك بنجاح!' : 'Message sent successfully!');
-            
-            // Reset form
-            this.reset();
-        });
+      // Add scroll effect to navigation
+      window.addEventListener("scroll", function () {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 100) {
+          nav.classList.add("shadow-xl");
+        } else {
+          nav.classList.remove("shadow-xl");
+        }
+      });
 
-        // Add scroll effect to navigation
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.classList.add('shadow-xl');
+      // Enhanced animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const element = entry.target;
+
+            // Add appropriate animation class based on element
+            if (element.classList.contains("animate-on-scroll")) {
+              if (
+                element.classList.contains("slide-up") ||
+                element.classList.contains("slide-left") ||
+                element.classList.contains("slide-right") ||
+                element.classList.contains("scale-in")
+              ) {
+                // Already has specific animation
+              } else {
+                element.classList.add("slide-up");
+              }
             } else {
-                nav.classList.remove('shadow-xl');
+              element.classList.add("fade-in");
             }
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections and animated elements
+      document
+        .querySelectorAll("section, .animate-on-scroll")
+        .forEach((element) => {
+          observer.observe(element);
         });
 
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+      // Video placeholder click handlers
+      document.querySelectorAll(".video-container").forEach((container) => {
+        container.addEventListener("click", function () {
+          // Simulate video play (in real implementation, you'd embed actual videos)
+          const playButton = this.querySelector("svg");
+          if (playButton) {
+            playButton.style.transform = "scale(1.2)";
+            setTimeout(() => {
+              playButton.style.transform = "scale(1)";
+            }, 200);
+          }
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
+          // Show message about video content
+          const isArabic = document.body.classList.contains("arabic");
+          const message = isArabic
+            ? "سيتم تشغيل الفيديو هنا في التطبيق الفعلي"
+            : "Video would play here in the actual implementation";
+          alert(message);
         });
+      });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'964743a8821bb6c4',t:'MTc1MzQwMDQ0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'9647676c233b1892',t:'MTc1MzQwMTkwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+  </body>
 </html>
